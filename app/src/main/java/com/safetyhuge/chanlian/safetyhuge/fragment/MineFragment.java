@@ -17,7 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.beiing.roundimage.CircleImageView;
+import com.kaopiz.kprogresshud.KProgressHUD;
 import com.lzy.okgo.OkGo;
+import com.lzy.okgo.callback.StringCallback;
 import com.safetyhuge.chanlian.ECApplication;
 import com.safetyhuge.chanlian.safetyhuge.Bean.FormGoodsBean;
 import com.safetyhuge.chanlian.safetyhuge.Bean.MyBean;
@@ -49,6 +51,7 @@ import com.safetyhuge.chanlian.safetyhuge.UIActivity.MineActivityInfo.XiangmuFra
 import com.safetyhuge.chanlian.safetyhuge.UIActivity.MineActivityInfo.XiangmuFragmentInfo.XiangmuFragmentFactory;
 import com.safetyhuge.chanlian.safetyhuge.http.JsonCallback;
 import com.safetyhuge.chanlian.safetyhuge.http.RequestAddress;
+import com.safetyhuge.chanlian.safetyhuge.utils.JSONUtil;
 import com.safetyhuge.chanlian.safetyhuge.utils.SharedPrefsUtil;
 import com.socks.library.KLog;
 import com.squareup.picasso.Picasso;
@@ -59,13 +62,16 @@ import com.zhl.cbdialog.CBDialogBuilder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import es.dmoral.toasty.Toasty;
+import me.drakeet.materialdialog.MaterialDialog;
 import okhttp3.Call;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import q.rorbin.badgeview.QBadgeView;
 
 import static com.safetyhuge.chanlian.safetyhuge.R.id.mine_daipingjia;
@@ -157,7 +163,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     private String mBalance1;
     private QBadgeView mQBadgeView, mQBadgeView1, mQBadgeView2, mQBadgeView3;
     ECInitParams.LoginAuthType mLoginAuthType = ECInitParams.LoginAuthType.NORMAL_AUTH;
-
+    KProgressHUD       mProgressHUD;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -174,6 +180,12 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         if (mUserid != null) {
             NetWork1(mUserid);
         }
+               mProgressHUD = KProgressHUD.create(getActivity())
+                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+                .setLabel("开店中....")
+                .setCancellable(true)
+                .setAnimationSpeed(3)
+                .setDimAmount(0.5f);
         return view;
     }
 
@@ -366,6 +378,11 @@ public class MineFragment extends Fragment implements View.OnClickListener {
                 break;
             //产品管理
             case R.id.mine_chanpin:
+                if (mUserid != "") {
+                    NetShop();
+                } else {
+                    Toasty.error(ECApplication.context, "请先登录", Toast.LENGTH_SHORT).show();
+                }
                 if (mUserid != "") {
                     ChanpingFragmentFactory mFactory = new ChanpingFragmentFactory(0);
                     mFactory.setFlage(true);
@@ -563,4 +580,69 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         // 注册成功跳转
         startActivity(intent);
     }
+    MaterialDialog mMaterialDialog;
+    private void NetShop() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("action", "IsOpenShop");
+        hashMap.put("uid", mUserid);
+        OkGo.post(RequestAddress.HOST + RequestAddress.GRZL).params(hashMap).execute(new StringCallback() {
+            @Override
+            public void onSuccess(String s, Call call, Response response) {
+                ResponseBody body = response.body();
+                KLog.e("whb", body);
+                Map<String, Object> mapForJson = JSONUtil.getMapForJson(s);
+                KLog.e("whb", s);
+                Object code = mapForJson.get("code");
+                if (code.equals("888")) {
+                    ChanpingFragmentFactory mFactory = new ChanpingFragmentFactory(0);
+                    mFactory.setFlage(true);
+                    SharedPrefsUtil.put(ECApplication.context, "chanpin", 0);
+                    startActivity(intent.setClass(getActivity(), ChanpinGLActivity.class));//跳转到个人设置*/
+                }else{
+                    mMaterialDialog = new MaterialDialog(getActivity())
+                            .setTitle("提示")
+                            .setMessage("您还没有开启店铺。是否开店？")
+                            .setPositiveButton("确定", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    mProgressHUD.show();
+                                    mMaterialDialog.dismiss();
+                                    OpenShop();
+                                }
+                            })
+                            .setNegativeButton("取消", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    mMaterialDialog.dismiss();
+                                }
+                            });
+
+                    mMaterialDialog.show();
+                }
+            }
+        });
+    }
+
+    private void OpenShop() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("action", "OpenShop");
+        hashMap.put("uid", mUserid);
+        OkGo.post(RequestAddress.HOST + RequestAddress.GRZL).params(hashMap).execute(new StringCallback() {
+            @Override
+            public void onSuccess(String s, Call call, Response response) {
+                ResponseBody body = response.body();
+                KLog.e("whb", body);
+                Map<String, Object> mapForJson = JSONUtil.getMapForJson(s);
+                KLog.e("whb", s);
+                Object code = mapForJson.get("code");
+                if (code.equals("888")) {
+                    mProgressHUD.dismiss();
+                    Toast.makeText(mContext, "开店成功", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(mContext, "开店失败", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
 }
