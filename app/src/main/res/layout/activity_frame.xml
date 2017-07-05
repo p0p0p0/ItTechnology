@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+    android:background="@color/bg_gray" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        >
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            >
+        </FrameLayout>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            >
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                >
+                <ImageView
+                    android:id="@+id/frame_iamge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/abo"
+                    />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    style="@style/rb_main"
+                    android:id="@+id/movie_rb"
+                    android:drawableTop="@drawable/news_bg_selector"
+                    android:text="首页"
+                    />
+            </RelativeLayout>
+         <!--   <RadioButton
+                style="@style/rb_main"
+                android:drawableTop="@drawable/news_bg_selector"
+                android:text="首页"
+                />-->
+            <RadioButton
+                style="@style/rb_main"
+                android:id="@+id/article_rb"
+                android:text="询价"
+                android:drawableTop="@drawable/revie_bg_selector"
+                />
+
+            <RadioButton
+                style="@style/rb_main"
+                android:id="@+id/pictrue_rb"
+                android:text="资讯"
+                android:drawableTop="@drawable/pics_bg_selector"
+                />
+
+            <RadioButton
+                style="@style/rb_main"
+                android:id="@+id/critic_gwc"
+                android:text="购物车"
+                android:drawableTop="@drawable/comments_bg_selector"
+                />
+            <RadioButton
+                style="@style/rb_main"
+                android:id="@+id/critic_rb"
+                android:text="我的"
+                android:drawableTop="@drawable/meinselecte"
+                />
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

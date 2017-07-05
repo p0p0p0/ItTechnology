@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/formgoods_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/bg_gray"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/item_goods_iamge"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@color/abo"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp"
+            >
+
+                <TextView
+                    android:id="@+id/item_goods_title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="111111"
+                    android:textColor="#666666"
+                    android:textSize="15sp"
+                    />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="15sp"
+                    android:id="@+id/item_goods_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="111111"
+                    android:textColor="@color/red"
+                    android:layout_alignParentBottom="true"
+                    />
+                <TextView
+                    android:id="@+id/item_goods_count1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1111"
+                    android:textColor="#999999"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+    >
+
+    <com.yazhi.superswiperefreshlayout.SuperSwipeRefreshLayout
+        android:id="@+id/superlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:AllowUpToRefresh="true"
+        app:BottomLocationPercent="1.5"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <com.safetyhuge.chanlian.safetyhuge.baseview.MyScrollview
+            android:id="@+id/my_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    />
+                <!--菜单栏-->
+                <include
+                    layout="@layout/layout_menu"
+                    />
+                <!--产品导购-->
+                <include
+                    layout="@layout/layout_product"
+                    />
+
+                <!--项目市场-->
+                <include
+                    layout="@layout/layout_project"
+                    />
+                <!--方案大厅-->
+                <include
+                    layout="@layout/layout_scheme"
+                    />
+
+                <!--技术服务-->
+                <include
+                    layout="@layout/layout_technology"
+                    />
+
+                <!--人才大厅-->
+                <include
+                    layout="@layout/layout_talents"
+                    />
+
+                <!--特价促销-->
+                <include
+                    layout="@layout/layout_bargain"/>
+
+                <!--技术培训-->
+                <include
+                    layout="@layout/layout_technologys"
+                    />
+
+                <!--猜你喜欢-->
+                <include
+                    layout="@layout/layout_ilike"
+                    />
+            </LinearLayout>
+        </com.safetyhuge.chanlian.safetyhuge.baseview.MyScrollview>
+
+    </com.yazhi.superswiperefreshlayout.SuperSwipeRefreshLayout>
+
+    <include layout="@layout/head_searche"/>
+
+</RelativeLayout>

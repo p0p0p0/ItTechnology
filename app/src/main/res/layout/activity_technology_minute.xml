@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/content_dp_10"
+            android:onClick="back_text_view"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/content_dp_10"
+            android:paddingTop="@dimen/content_dp_10"
+            android:text="资源详情"
+            android:textColor="@color/black"
+            android:textSize="@dimen/content_dp_18"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee"
+        />
+    <LinearLayout
+        android:id="@+id/miuute_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:background="@color/jue"
+                        />
+
+                    <TextView
+                        android:id="@+id/technology_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:text="11111111111"
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee"
+                    />
+            </LinearLayout>
+            <com.xiao.nicevideoplayer.NiceVideoPlayer
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"></com.xiao.nicevideoplayer.NiceVideoPlayer>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/minute_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/minute_xiazai"
+                android:textColor="#ffffff"
+                android:text="下载"
+                android:background="@color/jue"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

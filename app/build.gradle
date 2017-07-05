@@ -1,0 +1,171 @@
+apply plugin: 'com.android.application'
+
+android {
+    // 依赖插件脚本
+    apply from: 'tinker-support.gradle'
+    signingConfigs {
+        config {
+        }
+    }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+
+        applicationId "com.safetyhuge.chanlian.safetyhuge"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // provided 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:cardview-v7:25.2.0'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+
+    //compile 'com.android.support:design:25.2.0'
+
+    //compile 'com.android.support:support-annotations:25.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha2'
+    compile 'com.github.zhaokaiqiang.klog:library:1.5.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.1'
+
+    //网络请求框架
+
+    /* //okgo
+                compile 'com.lzy.net:okgo:+'
+
+                //版本号使用 + 可以自动引用最新版
+                compile 'com.lzy.net:okrx:+'
+
+                //版本号使用 + 可以自动引用最新版
+                compile 'com.google.code.gson:gson:2.2.4'*/
+    compile 'com.lzy.net:okgo:2.1.4'
+
+    //可以单独使用，不需要依赖下方的扩展包
+    compile 'com.lzy.net:okrx:0.1.2'
+
+    //RxJava扩展支持，根据需要添加
+    compile 'com.lzy.net:okserver:1.1.0'
+
+    //下载管理和上传管理扩展，根据需要添加
+    compile 'com.google.code.gson:gson:2.2.4'
+
+    //轮播图
+    compile 'com.youth.banner:banner:1.4.8'
+    compile files('libs/butterknife-7.0.1.jar')
+
+    //compile 'com.github.LineChen:RoundImageView:v1.0.0'
+    compile 'com.yazhi:superswiperefreshlayout:1.1.1'
+    compile 'com.kaopiz:kprogresshud:1.0.1'
+
+    //时间选择器
+    compile 'com.contrarywind:Android-PickerView:3.2.1'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+
+    //对话框
+    compile 'com.zhl.cbdialog:CBDialog:1.0.0'
+
+    //吐司
+    compile 'com.github.GrenderG:Toasty:1.1.4'
+
+    //资讯指示器
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+    compile 'com.yanzhenjie:permission:1.0.5'
+
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+   // compile 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //友盟
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'q.rorbin:badgeview:1.1.0'
+
+    //数据库
+    compile 'org.greenrobot:greendao:3.0.1'
+    compile 'org.greenrobot:greendao-generator:3.0.0'
+
+    //弹窗
+    compile project(':Popwindowslibrary')
+
+    //短信注册
+    compile name: 'SMSSDK-2.1.4', ext: 'aar'
+    compile name: 'SMSSDKGUI-2.1.4', ext: 'aar'
+    compile files('libs/MobCommons-2017.0321.1624.jar')
+    compile files('libs/MobTools-2017.0321.1624.jar')
+
+    //流式布局
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+
+    //地图
+    compile files('libs/AMap_Search_V5.0.0_20170309.jar')
+    compile files('libs/Android_Map3D_SDK_V5.0.0_20170311.jar')
+    compile files('libs/AMap_Location_V3.4.0_20170427.jar')
+
+    //对话框
+    compile 'me.drakeet.materialdialog:library:1.3.1'
+
+    //
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile project(':roundimageview')
+
+    //侧滑删除
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.5'
+
+    //Adapter终结者 地址：https://github.com/mcxtzhang/all-base-adapter
+    compile 'com.github.mcxtzhang:all-base-adapter:V1.5.2'
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile files('libs/jsoup-1.7.1.jar')
+    compile files('libs/Yuntx_FullLib_v5.2.1r.jar')
+
+    //下拉刷新
+    compile 'com.huxq17.xrefreshview:xrefreshview:3.6.9'
+
+    //支付宝
+    compile files('libs/alipaySingle-20170510.jar')
+
+    //视频播放
+    compile project(':nicevideoplayer')
+
+    //新闻滚动条
+    compile project(':MarqueeView')
+
+    //搜索框
+    compile 'com.wenwenwen888:searchbox:1.0.0'
+
+    compile 'com.wenwenwen888:searchedittext:1.0.0'
+    //应用更新
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    compile "com.android.support:multidex:1.0.1" // 多dex配置
+    compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+}

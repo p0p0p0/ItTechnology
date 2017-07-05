@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:id="@+id/drawer_layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:fitsSystemWindows="true"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                >
+
+                <ImageView
+                    android:id="@+id/tv_img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="back_text_view"
+                    android:padding="@dimen/content_dp_10"
+                    android:src="@mipmap/icon_back"/>
+                <TextView
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="项目市场"
+                    />
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/messge_img"
+                    android:layout_toRightOf="@+id/tv_img_back"
+                    android:background="@drawable/t_m_edit_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal"
+                    >
+
+                    <EditText
+                        android:id="@+id/Login_Edt_PassWord"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/content_dp_10"
+                        android:layout_toRightOf="@+id/text_rw"
+                        android:layout_weight="1"
+                        android:background="@color/whitetow"
+                        android:cursorVisible="true"
+                        android:gravity="center"
+                        android:hint="关键字查询"
+                        android:imeOptions="actionGo"
+                        android:textColor="@color/text_brown"
+                        android:textColorHint="#666666"
+                        android:textCursorDrawable="@drawable/guanbiao"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/content_dp_10"
+                        android:src="@mipmap/icon_search_xm"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/messge_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/content_dp_10"
+                    android:padding="@dimen/content_dp_10"
+                    android:src="@drawable/icon_cp_search"/>
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/project_fabu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/project"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/content_dp_15"
+                        android:layout_marginRight="@dimen/content_dp_5"
+                        android:layout_marginTop="@dimen/content_dp_15"
+                        android:text="发布时间"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/content_15"/>
+
+                    <ImageView
+                        android:id="@+id/roject_fabu_iamge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/doublea"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/project_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/project1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/content_dp_15"
+                        android:layout_marginRight="@dimen/content_dp_5"
+                        android:layout_marginTop="@dimen/content_dp_15"
+                        android:text="剩余时间"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/content_15"/>
+
+                    <ImageView
+                        android:id="@+id/roject_item_iamge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/doublea"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/project_yusuan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/project2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/content_dp_15"
+                        android:layout_marginRight="@dimen/content_dp_5"
+                        android:layout_marginTop="@dimen/content_dp_15"
+                        android:text="预算"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/content_15"/>
+
+                    <ImageView
+                        android:id="@+id/roject_yusuan_iamge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/doublea"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/project_shaixuan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/content_dp_15"
+                        android:layout_marginRight="@dimen/content_dp_5"
+                        android:layout_marginTop="@dimen/content_dp_15"
+                        android:text="筛选"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/content_15"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/shaixuana"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.safetyhuge.chanlian.safetyhuge.views.SwipeRefreshView
+                android:id="@+id/swipe_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--
+                            <ScrollView
+                                android:id="@+id/scrollView_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">-->
+
+                <com.safetyhuge.chanlian.safetyhuge.baseview.MyListView
+                    android:id="@+id/bazaar_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    />
+                <!-- </ScrollView>-->
+            </com.safetyhuge.chanlian.safetyhuge.views.SwipeRefreshView>
+
+
+            <LinearLayout
+                android:id="@+id/quanbu_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_wu"
+                    />
+
+                <TextView
+                    android:id="@+id/text111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="17sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <!--侧滑菜单-->
+    <FrameLayout
+        android:id="@+id/nav_view"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#fff"
+        android:orientation="vertical"
+        >
+
+        <include
+            layout="@layout/activity_shaixuan"
+            />
+    </FrameLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:elevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/content_dp_10"
+            android:onClick="back_text_view"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/content_dp_10"
+            android:paddingTop="@dimen/content_dp_10"
+            android:text="标书列表"
+            android:textColor="@color/black"
+            android:textSize="@dimen/content_18"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/tender_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></ListView>
+    <!--显示没有数据-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/quanbu_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_wu"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="目前无人投标"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+</LinearLayout>

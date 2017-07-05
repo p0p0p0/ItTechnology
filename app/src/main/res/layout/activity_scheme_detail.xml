@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/content_dp_10"
+            android:onClick="back_text_view"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/content_dp_10"
+            android:paddingTop="@dimen/content_dp_10"
+            android:text="方案详情"
+            android:textColor="@color/black"
+            android:textSize="@dimen/content_18"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/scheme_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+        <com.beiing.roundimage.CircleImageView
+            android:id="@+id/scheme_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/scheme_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15.5dp"
+            android:text=""
+            android:textColor="#4d4d4d"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15.5dp"
+            android:text=" | "
+            android:textColor="#4d4d4d"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15.5dp"
+            android:text="山东省青岛市"
+            android:textColor="#4d4d4d"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:paddingLeft="27dp">
+
+            <TextView
+                android:maxLines="1"
+                android:id="@+id/scheme_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="#4d4d4d"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_rwxq_file"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#f7f7f7"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布时间:  "
+                android:textColor="#4e4e4e"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/scheme_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4e4e4e"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#e6e6e6"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载量:  "
+                android:textColor="#4e4e4e"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/scheme_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4e4e4e"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#4d4d4d"
+                android:id="@+id/scheme_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:id="@+id/scheme_collect"
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/shoucang"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_shoucang_nor"
+                />
+
+            <TextView
+                android:id="@+id/scheme_shouchang"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="收藏"
+                android:textColor="#666666"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scheme_download"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/jue"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

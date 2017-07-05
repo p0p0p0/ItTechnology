@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        app:cardElevation="7dp"
+        >
+    <LinearLayout
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <ImageView
+              android:scaleType="centerCrop"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:src="@drawable/img_jssc"
+              />
+            <ImageView
+                android:id="@+id/more_jishu"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_more_gray"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/content_dp_1"
+            android:layout_marginLeft="@dimen/content_dp_8"
+            android:layout_marginRight="@dimen/content_dp_8"
+            android:background="@color/dise"/>
+
+        <ImageView
+            android:id="@+id/jishu_layout"
+            android:layout_margin="10dp"
+            android:scaleType="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_sy_jsfu"/>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

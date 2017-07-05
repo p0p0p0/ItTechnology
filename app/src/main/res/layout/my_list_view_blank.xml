@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/content_dp_10"
+        android:text="路由器技术解决方案"
+        android:textColor="@color/black"
+        android:textSize="@dimen/content_13" />
+
+    <TextView
+        android:id="@+id/item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_dp_10"
+        android:layout_marginLeft="@dimen/content_dp_10"
+        android:layout_marginRight="@dimen/content_dp_10"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="我是徐艳昭  我是最帅的 ，谁能有我帅呢，超超超超级无敌大帅哥，巨无霸！超超超超级无敌大帅哥，巨无霸！超超超超级无敌大帅哥，巨无霸！，超超超超级无敌大帅哥，巨无霸！"
+        android:textColor="@color/jiujiu"
+        android:textSize="@dimen/content_13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_dp_10"
+        android:layout_marginLeft="@dimen/content_dp_10"
+        android:layout_marginRight="@dimen/content_dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="项目预算："
+            android:textColor="@color/ff6600"
+            android:textSize="@dimen/content_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/content_dp_8"
+            android:text="￥"
+            android:textColor="@color/ff6600"
+            android:textSize="@dimen/content_15" />
+
+        <TextView
+            android:id="@+id/item_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000000000"
+            android:textColor="@color/ff6600"
+            android:textSize="@dimen/content_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/content_dp_10"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/text_views_rq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投稿截止日期："
+                android:textColor="@color/jiujiu"
+                android:textSize="@dimen/content_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017-03-03"
+                android:layout_toRightOf="@+id/text_views_rq"
+                android:textColor="@color/text_brown"
+                android:textSize="@dimen/content_12" />
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/text_brown"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/content_dp_10"
+            android:paddingLeft="@dimen/content_dp_10">
+
+            <TextView
+                android:id="@+id/item_addth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="海南省保亭黎族苗族自治县"
+                android:textColor="@color/jiujiu"
+                android:textSize="@dimen/content_12" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

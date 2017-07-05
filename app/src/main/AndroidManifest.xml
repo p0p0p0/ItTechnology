@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+    package="com.safetyhuge.chanlian.safetyhuge">
+    <uses-sdk android:minSdkVersion="16"></uses-sdk>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" ></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" ></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" ></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--bugly-->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!--mob-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--地图包、搜索包需要的基础权限-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"  />
+    //地图
+    <permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <!--定位包、导航包需要的额外权限（注：基础权限也需要）-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--允许程序打开网络套接字-->
+    <!--允许程序设置内置sd卡的写权限-->
+    <!--允许程序获取网络状态-->
+    <!--允许程序访问WiFi网络信息-->
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!--用于访问网络，网络定位需要上网-->
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!--用于写入缓存数据到扩展存储卡-->
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+    //支付宝
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--Im-->
+    // SDK 权限申明, 第三方 APP 接入时，请将 com.yuntongxun.ecdemo 替换为自己的包名
+    // 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。
+    <permission
+        android:name="com.safetyhuge.chanlian.safetyhuge.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.safetyhuge.chanlian.safetyhuge.permission.INCOMING_CALL"
+        android:protectionLevel="signature" />
+    // 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.yuntongxun.ecdemo 替换为自己的包名
+    <uses-permission android:name="com.safetyhuge.chanlian.safetyhuge.permission.RECEIVE_MSG" />
+    // 如果没有VOIP功能可以忽略
+    <uses-permission android:name="com.safetyhuge.chanlian.safetyhuge.permission.INCOMING_CALL" />
+
+    <!-- 允许程序打开网络sockets(必选配置) -->
+    <!-- 允许程序访问有关的网络信息(必选配置) -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问Wi-Fi网络状态信息(必选配置) -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许应用写（非读）用户的外部存储器(必选配置) -->
+    <!-- add -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许读取电话的状态(必选配置) -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许一个程序获取信息有关当前或最近运行的任务，一个缩略的任务状态，是否活动等等(必选配置) -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 允许程序录制音频(必选配置) -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许应用程序修改全局声音设置的权限 (必选配置) -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 允许使用PowerManager的WakeLocks保持进程在休眠时从屏幕消失(必选配置) -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许请求访问使用照相设备(如果使用视频通话则必选配置) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 允许程序连接到已配对的蓝牙设备(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 允许程序发现和配对蓝牙设备(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- GPS定位权限(非必选，由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 允许一个程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 允许一个程序访问精良位置(如GPS) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允许程序读取用户联系人数据(非必选，由应用选择是否需要) -->
+    <!-- 允许访问振动设备(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 允许程序禁用键盘锁(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 允许一个程序接收到 ACTION_BOOT_COMPLETED广播在系统完成启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    //短信
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:name="com.safetyhuge.chanlian.ECApplication"
+        android:icon="@drawable/logo_a"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme"
+        >
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".splash.Activity.WelcomeActivity"
+            android:theme="@style/Appwelcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //自动更新
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        //标书列表
+        <activity android:name=".UIActivity.Activity.TenderMinuteActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.TenderMinuteSActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.TenderMinuteDjActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.TenderMinutePtActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        //TenderMinuteSActivity
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity
+            android:name=".UIActivity.Activity.ForGetActivity"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name="com.safetyhuge.chanlian.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".UIActivity.Activity.EJanActivity"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".UIActivity.Activity.BazaarProjectActivity"
+            android:configChanges="orientation|keyboard"
+             android:windowSoftInputMode="adjustPan"
+             android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".UIActivity.Activity.ProductSoppinggActivity"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".UIActivity.Activity.SchemeHallActivity"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".UIActivity.Activity.TalentsHallActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".UIActivity.Activity.TechnologyTrainActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".UIActivity.Activity.LeaseEquipmentActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".UIActivity.Activity.FinancialInfoActivity.FinancialActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            />
+        <activity
+            android:name=".splash.Activity.WelcomeGuideActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <!--个人设置-->
+        <activity
+            android:name=".UIActivity.Activity.SettingActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:name=".UIActivity.Activity.PersonageActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:name=".UIActivity.Activity.PaypasswordActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".UIActivity.Activity.FirmActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--修改密码-->
+        <activity
+            android:name=".UIActivity.Activity.AmendasswordActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--修改密码-->
+        <activity
+            android:name=".UIActivity.Activity.GoodsMinuteActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--人才信息-->
+        <activity
+            android:name=".UIActivity.Activity.TalentsMsgActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--方案详细-->
+        <activity
+            android:name=".UIActivity.Activity.SchemeDetailActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--发布项目-->
+        <activity
+            android:name=".UIActivity.Activity.ReleaseProjectActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--发布项目-->
+        <activity
+            android:name=".UIActivity.Activity.IssueProjectActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--支付-->
+        <activity
+            android:name=".UIActivity.Activity.PayActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--支付-->
+        <activity
+            android:name=".UIActivity.Activity.NewsInfoActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!--项目详细-->
+        <!--我要延期-->
+        <activity
+            android:name=".UIActivity.Activity.PostponeActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--附件下载-->
+        <activity
+            android:name=".UIActivity.Activity.FileActivity"
+            android:windowSoftInputMode="adjustPan"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!--项目投标-->
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.CompetitiveActivityInfo.CommonActivity"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.CompetitiveActivityInfo.CompetitiveActivity"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.CompetitiveActivityInfo.SubscriptionActivity"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.InvitationActivity"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!--金融-->
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.FinancialInfoActivity.FinancialJinKuActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.FinancialInfoActivity.FinancialZhongChouActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.FinancialInfoActivity.FinancialXiaoeActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <!--标书列表-->
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.Thetenderlist.CommonsActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.Thetenderlist.PeopleActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.Thetenderlist.SoloActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.Thetenderlist.SubActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <!--我的-->
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.ArrdessActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.ChanpingFragmentInfo.ChanpinGLActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.FananFragmentInfo.FananGlActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.FileGltActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.GoodsFragmentInfo.GoodsInfoActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.SaleGoodsFragmentInfo.SaleGoodsInfoActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.CollectFragmentInfo.MineCollectActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.ToubiaoFragmentInfo.ToubiaoGlActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.TradingActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.MineWalletActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.XiangmuFragmentInfo.XiangmGLActivity"
+                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.Thetenderlist.ProjectMinuteActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.TechnologyminuteActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity android:name=".UIActivity.Activity.IndentActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.Activity.FinancialInfoActivity.FinancialRongzActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.ChakanGoodsActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name=".UIActivity.MineActivityInfo.PingjiaActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity android:name=".UIActivity.MineActivityInfo.AdddizhiActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".splash.Activity.Splash"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.FaBuCpActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".utils.ClipImageActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.MineActivityInfo.RechargeActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.MineActivityInfo.WithdrawActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.ContFragmentActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.SchemeFilesInfoActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.LoginsActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.ResePassWordActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.CertificateActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.ReleaseActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.Activity.ReleaseFwActivity"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.Activity.ReleaseQzActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.Activity.MapInfoActivity"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.ServiceIndentActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.ServiceCollectActivity"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.ServiceEvaluateActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.ServiceHelpActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.ServiceIssueActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.MineFragmentInfo.ServiceindentminuteActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.MineFragmentInfo.HelpEvaluateActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.FwXiangxiActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.QZXiangXiActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.FuWuXiangQingActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.MiInformationActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.MinInfoActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.LiJiYuYueActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.QuBangMangActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.Activity.FuwuSouShuoActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="stateVisible|adjustResize"
+            />
+        <activity android:name=".UIActivity.Activity.FaPiaoActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.FuJInSSActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.MineFragmentInfo.ServiceHelp1Activity"
+                        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+        />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.MineFragmentInfo.ServiceHelp2Activity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <activity android:name=".UIActivity.MineActivityInfo.ServiceIndentPingjiaActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        //搜索框
+        <activity android:name=".UIActivity.Activity.SearchInfoActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                  android:windowSoftInputMode="adjustPan"
+            />
+        <meta-data
+            android:value="58f56ccff29d981b240011b9" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="a822255fbf2fb3c10264e51e9ae7c899"> </meta-data>
+        <service android:name="com.amap.api.location.APSService"></service>
+        //首页搜索
+        <activity android:name=".UIActivity.Activity.BlankSSActivity"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity android:name=".fragment.NearbyFragmentInfo.UI.MineActivityInfo.MineFragmentInfo.Serviceindentminute2Activity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <!--im-->
+        <activity android:name=".IM.ui.LauncherActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity android:name=".IM.ui.account.NewLauncherActivity"
+
+            />
+        <!-- 会话消息聊天主界面 -->
+        <activity
+            android:name=".IM.ui.chatting.ChattingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 联系人详情选项卡 -->
+        <activity
+            android:name=".IM.ui.contact.ContactDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 手机系统联系人 -->
+
+        <!-- 发送预览图片 -->
+        <activity
+            android:name=".IM.ui.chatting.ImagePreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:process=":tools"
+            android:screenOrientation="portrait"
+            android:theme="@style/CCPTheme.Holo.Transparent" />
+        <activity
+            android:name=".IM.ui.chatting.VideoRecordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/CCPTheme.Holo.Transparent" />
+        <!-- 查看聊天图片 -->
+        <activity
+            android:name=".IM.ui.chatting.ImageGalleryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/CCPTheme.Holo.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".IM.ui.chatting.ImageGralleryPagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 群组 -->
+        <!-- 联系人选择 -->
+        <activity
+            android:name=".IM.ui.contact.ContactSelectListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".IM.ui.contact.SelectContactUI"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 设置页面 -->
+        <activity
+            android:name=".IM.ui.settings.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".IM.ui.contact.GroupCardSelectUI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 群组搜索 -->
+        <activity
+            android:name=".IM.ui.settings.EditConfigureActivity"
+            android:label="@string/title_activity_edit_configure"
+            android:screenOrientation="portrait" />
+        <!-- 申请加入群组 -->
+        <activity
+            android:name=".IM.ui.settings.LoginSettingActivity"
+            android:label="@string/title_activity_login_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IM.ui.contact.AtSomeoneUI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".IM.ui.settings.AboutActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".IM.ui.account.ECServerConfigListUI"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".IM.photopicker.PhotoPickerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+
+        // SDK核心服务配置
+        <service android:name="com.yuntongxun.ecsdk.ECClientService"
+                 android:enabled="true" android:process=":push" />
+
+        // 提高sdk服务存活率（v5.2.2r以后版本提供）
+        <service android:name="com.yuntongxun.ecsdk.ECClientService$InnerService"
+                 android:enabled="true" android:process=":push" />
+
+        // 以下两项为SDK内部处理项，其中booter.Alarm在v5.1.9r以后版本提供
+        <receiver android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$AlarmReceiver"
+                  android:process=":push"/>
+        <receiver android:name="com.yuntongxun.ecsdk.booter.Alarm"
+                  android:exported="false" android:process=":push"/>
+
+        // SDK网络改变广播
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$ConnectionReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        // SDK广播通知配置（开机广播）
+        // 可选广播、如果应用想做开机重启，可以实现该广播通知即可
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$BootReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        // 声明自定义通知的广播接收器（需要替换包名，详见注意事项）
+        <receiver
+            android:name=".IM.service.YuntxNotifyReceiver"
+            android:exported="false">
+            <intent-filter>
+                // 接收push消息
+                // action匹配规则{packageName + ".action" + "功能"}
+                <action android:name="com.safetyhuge.chanlian.safetyhuge.action.VOIP_CALL" />
+                <action android:name="com.safetyhuge.chanlian.safetyhuge.action.MESSAGE" />
+                <action android:name="com.safetyhuge.chanlian.safetyhuge.NOTIFICATION_CLICK" />
+                <action android:name="com.safetyhuge.chanlian.safetyhuge.PERSON_VERSION" />
+            </intent-filter>
+        </receiver>
+        //支付宝
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+    </application>
+
+</manifest>

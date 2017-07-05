@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:elevation="@dimen/whb_elevation"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/content_dp_10"
+            android:onClick="back_text_view"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/content_dp_10"
+            android:paddingTop="@dimen/content_dp_10"
+            android:text="项目投标"
+            android:textColor="@color/black"
+            android:textSize="@dimen/content_18"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:text="描述"
+                android:textColor="#666666"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <EditText
+            android:gravity="top"
+            android:id="@+id/comperttove_et"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="13sp"
+            android:background="@drawable/background_yy"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/hidden_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="是否隐藏标书?隐藏之后您的标书只有您和项目发布者可见"
+        android:textColor="#666666"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:id="@+id/comperttove_cx1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是"
+            android:textColor="#666666"
+            />
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/comperttove_cx2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="否"
+            android:textColor="#666666"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/comperttove_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/jue"
+            android:text="提交"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+</LinearLayout>

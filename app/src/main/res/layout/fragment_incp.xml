@@ -1,0 +1,175 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:background="@drawable/bg_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="巨安全"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/content_16"
+                />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/iv_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/content_dp_10"
+                android:src="@drawable/icon_setting"
+                />
+
+            <ImageView
+                android:id="@+id/button_im"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/content_dp_10"
+                android:src="@drawable/icon_message"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_gradient"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/messge_img"
+                android:layout_toRightOf="@+id/tv_img_back"
+                android:layout_weight="1"
+                android:background="@drawable/background_yy"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <EditText
+                    android:id="@+id/Login_Edt_PassWord"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/content_dp_10"
+                    android:layout_toRightOf="@+id/text_rw"
+                    android:layout_weight="1"
+                    android:background="@color/whitetow"
+                    android:cursorVisible="true"
+                    android:gravity="center"
+                    android:hint="请输入关键字"
+                    android:imeOptions="actionGo"
+                    android:textColor="@color/text_brown"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@drawable/guanbiao"
+                    android:textSize="@dimen/content_dp_14"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/content_dp_10"
+                    android:src="@mipmap/icon_search_xm"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="巨安全"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:src="@drawable/icon_message"
+                    android:textColor="#ffffff"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="#ffffff"
+                      android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/button_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:visibility="gone"
+                    />
+
+                <ListView
+                    android:id="@+id/superlistView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#00000000"
+                    android:dividerHeight="0dip"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="none"
+                    >
+                </ListView>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/subListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/beijing"
+                android:divider="#00000000"
+                android:dividerHeight="0dip"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none"
+                >
+            </ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:elevation="@dimen/whb_elevation"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/content_dp_10"
+            android:onClick="back_text_view"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:id="@+id/solo_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/content_dp_10"
+            android:paddingTop="@dimen/content_dp_10"
+            android:text="产品管理"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        >
+    <com.safetyhuge.chanlian.safetyhuge.widget.PagerSlidingTab
+        android:id="@+id/SlidingTab"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="50dp"
+        ></com.safetyhuge.chanlian.safetyhuge.widget.PagerSlidingTab>
+    </LinearLayout>
+    <com.safetyhuge.chanlian.safetyhuge.baseview.NoScrollViewPager
+        android:id="@+id/solo_danren"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.safetyhuge.chanlian.safetyhuge.baseview.NoScrollViewPager>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/head_search_rr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/touming">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/tv_img_yj"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/content_dp_10"
+            android:src="@mipmap/icon_fabiao_w"/>
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/blank_sousuo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/messge_img"
+            android:layout_toRightOf="@+id/tv_img_yj"
+            android:background="@drawable/t_m_edit_bg"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/icon_search_xm"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/text_rw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_dp_10"
+                android:text="点击查询"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/content_15"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/messge_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/content_dp_10"
+            android:src="@mipmap/icon_message"/>
+
+    </RelativeLayout>
+</RelativeLayout>

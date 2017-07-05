@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        >
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#eeeeee"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.beiing.roundimage.CircleImageView
+                    android:id="@+id/quanbu_iamge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_rwxq_tx"
+                    android:scaleType="centerCrop"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/danren_layout"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/quanbu_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="意思通"
+                            android:textSize="15sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/quanbu_zhuangtai"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="意思通"
+                            android:textColor="@color/jue"
+                            android:textSize="15sp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/quanbu_neirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="2222222222222222222"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/yincang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/icon_jubao_sel"
+                        android:text="    您无权查看"
+                        android:textColor="#666666"
+                        android:textSize="15sp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/quanbu_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="投标时间: 2017-04-16 19:19:05"
+                    />
+
+                <TextView
+                    android:id="@+id/quanbu_chakan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bindback_bg2"
+                    android:gravity="center"
+                    android:text="查看附件"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:id="@+id/button_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        />
+
+                    <Button
+                        android:id="@+id/quanbu_moren"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bindback_bg2"
+                        android:gravity="center"
+                        android:text="设为淘汰"
+                        android:textColor="#333333"
+                        android:textSize="13sp"
+                        />
+
+                    <Button
+                        android:id="@+id/quanbu_ruwei"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bindback_bg3"
+                        android:text="设为入围"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        />
+
+                    <Button
+                        android:id="@+id/quanbu_zhongbiao"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bindback_bg3"
+                        android:text="设为中标"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        />
+                </LinearLayout>
+                <!--!!!!!!!-->
+                <LinearLayout
+                    android:id="@+id/duoren_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        />
+
+                    <Button
+                        android:id="@+id/duoren_moren"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bindback_bg2"
+                        android:gravity="center"
+                        android:text="设为淘汰"
+                        android:textColor="#333333"
+                        android:textSize="13sp"
+                        />
+
+                    <Button
+                        android:id="@+id/duoren_yidengjiang"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bindback_bg3"
+                        android:text="一等奖"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        />
+
+                    <Button
+                        android:id="@+id/duoren_erdengjiang"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bindback_bg3"
+                        android:text="二等奖"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        />
+
+                    <Button
+                        android:id="@+id/duoren_sandengjiang"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bindback_bg3"
+                        android:text="三等奖"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

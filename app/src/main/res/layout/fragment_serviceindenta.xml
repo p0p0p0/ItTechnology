@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+        <ListView
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            android:divider="@null"
+            android:id="@+id/serviceindent_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+        <!--显示没有数据-->
+        <LinearLayout
+            android:id="@+id/quanbu_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_wu"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="没有数据"
+                    android:textSize="17sp"
+                    />
+        </LinearLayout>
+</LinearLayout>

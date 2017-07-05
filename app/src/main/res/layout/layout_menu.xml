@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="#ffffff"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_marginBottom="9dp"
+        app:cardElevation="7dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="10.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/xmsc_rel"
+                style="@style/home_header"
+                android:drawableTop="@drawable/icon_xiangmu"
+                android:text="项目市场"/>
+
+            <TextView
+                android:id="@+id/cpdg_rel"
+                style="@style/home_header"
+                android:drawableTop="@drawable/fuwu"
+                android:text="产品导购"/>
+
+            <TextView
+                android:id="@+id/fadt_rel"
+                style="@style/home_header"
+                android:drawableTop="@drawable/icon_fangan"
+                android:text="方案大厅"/>
+
+            <TextView
+                android:id="@+id/rcdt_rel"
+
+                style="@style/home_header"
+                android:drawableTop="@drawable/icon_rencai"
+                android:text="人才大厅"/>
+
+            <TextView
+                android:id="@+id/jspx_rel"
+                style="@style/home_header"
+                android:drawableTop="@drawable/icon_peixun"
+                android:text="技术培训"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="23dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cxzq_rel"
+                style="@style/home_header"
+                android:drawableTop="@drawable/icon_cuxiao"
+                android:text="促销专区"/>
+
+            <TextView
+                android:id="@+id/rssc_rel"
+                style="@style/home_header"
+                android:drawableTop="@drawable/icon_ershou"
+                android:text="二手交易"/>
+
+            <TextView
+                android:id="@+id/sbzl_rel"
+                style="@style/home_header"
+                android:drawableTop="@drawable/icon_shebei"
+                android:text="设备租赁"/>
+
+            <TextView
+                android:id="@+id/jrzq_rel"
+                style="@style/home_header"
+                android:drawableTop="@drawable/qian"
+                android:text="金融专区"/>
+
+            <TextView
+                android:id="@+id/fujinfuwu"
+                style="@style/home_header"
+                android:drawableTop="@drawable/weizhi"
+                android:text="附近服务"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!--新闻中心-->
+    <include
+        layout="@layout/layout_press"
+        />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

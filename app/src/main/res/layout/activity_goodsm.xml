@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/content_dp_10"
+            android:onClick="back_text_view"
+            android:src="@mipmap/icon_back"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:id="@+id/bt_chanpin"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="产品"
+                    android:textColor="#666666"
+                    />
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/goodsm_xian"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/jue"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:id="@+id/bt_pingjia"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:text="评价"
+                    />
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/goodsm_xian1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/jue"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/goods_im"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/content_dp_10"
+            android:src="@drawable/icon_message_b"
+            />
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/goodsm_flayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

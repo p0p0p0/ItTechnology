@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <com.beiing.roundimage.CircleImageView
+                    android:id="@+id/serice_image"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/icon_small_tx"
+                    />
+
+                <TextView
+                    android:id="@+id/serice_name"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="111111"
+                    android:textColor="#666666"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/serice_state"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="2222222"
+                android:textColor="#666666"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/serice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/serice_image1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_fw_small"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/serice_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxEms="1"
+                    android:text="11111111111111"
+                    android:textColor="#666666"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/serice_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="11111"
+                        android:textColor="@color/jue"/>
+
+                    <TextView
+                        android:id="@+id/serice_count"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="111111"
+                        android:textColor="#666666"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e5e5e5"
+            />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="合计: "
+                    android:textColor="#666666"
+                    />
+
+                <TextView
+                    android:id="@+id/serice_moneys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="2222222"
+                    android:textColor="@color/jue"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/indent2_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <Button
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#666666"
+                android:text="评价"
+                android:id="@+id/indent2_layout1_1"
+                android:background="@drawable/checked_bg1"
+                android:layout_alignParentRight="true"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/indent2_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <Button
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#666666"
+                android:text="开始服务"
+                android:id="@+id/indent2_layout2_1"
+                android:background="@drawable/checked_bg1"
+                android:layout_alignParentRight="true"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/indent2_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <Button
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#666666"
+                android:text="服务完成"
+                android:id="@+id/indent2_layout3_1"
+                android:background="@drawable/checked_bg1"
+                android:layout_alignParentRight="true"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+        //同意 拒绝
+        <RelativeLayout
+            android:id="@+id/indent2_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <Button
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#666666"
+                android:text="拒绝接单"
+                android:id="@+id/indent2_layout4_1"
+                android:background="@drawable/checked_bg1"
+                android:layout_width="90dp"
+                android:layout_toLeftOf="@+id/indent2_layout4_2"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                />
+            <Button
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#666666"
+                android:text="接受接单"
+                android:id="@+id/indent2_layout4_2"
+                android:background="@drawable/checked_bg1"
+                android:layout_alignParentRight="true"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#e5e5e5"
+        />
+</LinearLayout>

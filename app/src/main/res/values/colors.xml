@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="touming">#40000000</color>
+    <color name="bg_gray">#f1f1f1</color>
+    <color name="red">#FA0C09</color>
+
+    <color name="abo">#338fe4</color>
+    <color name="text_brown">#666666</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whites">#30FFFFFF</color>
+    <color name="whitetow">#00FFFFFF</color>
+    <color name="black">#333333</color>
+    <color name="jiujiu">#999999</color>
+    <color name="dise">#e5e5e5</color>
+    <color name="eeeeee">#eeeeee</color>
+    <color name="ff6600">#ff5400</color>
+    <color name="sid">#4d4d4d</color>
+    <color name="bil">#f24f2f</color>
+    <color name="bils">#b6b1b1</color>
+    <color name="slidingtab_indicatorcolor">#999999</color>
+
+    <!-- 黄色 -->
+    <color name="text_gray">#8e8e8e</color>
+    <color name="text_qgray">#dadada</color>
+    <!-- 西红柿色 -->
+    <color name="jue">#ff5400</color>
+    <color name="bg_gray_title">#338fe4</color>
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="home">#f67238</color>
+    <color name="button">#f6f6f6</color>
+    <color name="lanse">#6ca0db</color>
+
+    <color name="juse">#F67238</color>
+    <color name="beijing">#f7f7f7</color>
+    <color name="bg_window">#ffe5e5e5</color>
+    <color name="menu_bg_press2">#fff</color>
+    <color name="list_divider_line">#e7e7e7</color>
+    <color name="zhuceColor">#f5f5f5</color>
+    <color name="bantou">#50000000</color>
+
+    <color name="abc_search_url_text_normal">#ff7fa87f</color>
+
+    <item name="abc_search_url_text_selected" type="color">@*android:color/black</item>
+    <item name="abc_search_url_text_pressed" type="color">@*android:color/black</item>
+    <item name="green_btn_color_disable" type="color">@color/ccp_green_alpha</item>
+
+    <color name="list_divider">#ffdadada</color>
+    <color name="green_btn_color_pressed">#ff298409</color>
+    <color name="gray">#ff9a9b9c</color>
+    <color name="transparent">#00000000</color>
+    <color name="normal_text_color">#ff353535</color>
+    <color name="light_text_color">#ffd7d7d7</color>
+    <color name="list_devider_color">#fff2f2f2</color>
+    <color name="progress_horizontal_green">#ff45c01a</color>
+    <color name="hint_text_color">#ff999999</color>
+    <color name="white_color_disable">#7fffffff</color>
+    <color name="ccp_green">#ff00B486</color>
+    <color name="launcher_tab_text_color">#ff636363</color>
+    <color name="launcher_tab_text_color_press">#ffc9c9c9</color>
+    <color name="ccp_green_alpha">#7f00B486</color>
+    <color name="navpage">#ffffffff</color>
+    <color name="last_msg_tv_color">#ffaaaaaa</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="footer_text_color">#ff7f7f7f</color>
+    <color name="chatroom_user_displayname_color">#A9A9A9</color>
+    <color name="form_hint_text_color">#ffdddddd</color>
+    <color name="text_disabled">#ffa8a8a8</color>
+    <color name="common_popup_menu_list_divider">#ff191919</color>
+    <color name="edit_save_btn_color_disable">#ffa8c6ed</color>
+    <color name="edit_save_btn_color_click">#ffffffff</color>
+    <color name="small_line_color">#26000000</color>
+    <color name="red_btn_color_normal">#ffff5454</color>
+    <color name="red_btn_color_pressed">#ffd24242</color>
+    <color name="red_btn_color_disable">#7fff5454</color>
+    <color name="text_content">#ffa19d94</color>
+    <color name="dialog_background">#fffbf6f2</color>
+    <color name="dialog_btn_press">#ffece5df</color>
+    <color name="dialog_divider">#ffe8e0da</color>
+    <color name="dialog_btn_normal">#fffbf6f2</color>
+    <color name="dialog_item_press">#ffece5df</color>
+    <color name="text_desc">#ffbebbb4</color>
+    <color name="text_title">#ff5f5f5f</color>
+    <color name="blue">#ff169aff</color>
+    <color name="album_ui_bg">#ff191919</color>
+    <color name="bottom_notepad_panel_bg">#FFF4F4F4</color>
+    <color name="hint_color_white_bg">#ffc5c5c5</color>
+    <color name="devideline_listview">#ffe5e2d4</color>
+    <item name="menu_pressed_color" type="color">@color/small_line_color</item>
+    <color name="bg_warning">#fffde1b6</color>
+    <color name="text_warning">#ffb8956b</color>
+    <color name="link_color">#ff406ca2</color>
+    <item name="service_normal_color" type="color">@color/link_color</item>
+
+    <color name="video_notify_original_state">#55BC75</color>
+
+    <color name="ccp_alert_bg">#3F474A</color>
+
+    <!-- version 3.6 -->
+    <!-- developer mode launcher normal color -->
+    <!-- developer mode launcher pressed color -->
+    <!-- experience mode launcher normal color -->
+    <!-- experience mode launcher normal color -->
+
+    <!-- 绿色 -->
+    <color name="green">#45CD87</color>
+
+    <!-- 紫色 -->
+
+    <!-- 浅黄绿 -->
+
+    <!-- 红紫 -->
+
+    <!-- 灰色 -->
+
+    <!-- 半透明 -->
+
+    <color name="picker_white">#ffffff</color>
+    <color name="picker_bg_floder_press">#bdbdbd</color>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/schemehall_layout"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:visibility="invisible"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:text="1"
+            />
+
+        <ImageView
+            android:id="@+id/schemehall_image1"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/img_fw_zwt_small"
+            />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:textColor="#666666"
+                    android:id="@+id/schemehall_title1"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/schemehall_title"
+                    android:textColor="#666666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="付款人数:"/>
+                <TextView
+                    android:textColor="#666666"
+                    android:id="@+id/schemehall_domain1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/splash_image"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/guanggao"
+        />
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:id="@+id/skip"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:background="@drawable/beijnga"
+        >
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+    <TextView
+        android:id="@+id/tv_number_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:textColor="#ff5102"
+        android:layout_toLeftOf="@+id/tv_splash"
+
+        />
+    <TextView
+        android:id="@+id/tv_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳过"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

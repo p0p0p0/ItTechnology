@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:onClick="back_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/content_dp_10"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/content_dp_10"
+            android:paddingTop="@dimen/content_dp_10"
+            android:text="意见反馈"
+            android:textColor="@color/black"
+            android:textSize="@dimen/content_dp_18" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_opinion"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="@dimen/content_dp_10"
+        android:background="@drawable/edit_bg"
+        android:hint="请输入你的宝贵建议"
+        android:cursorVisible="true"
+        android:gravity="top"
+        android:textColor="@color/black"
+        android:textColorHint="@color/text_brown"
+        android:textCursorDrawable="@drawable/guanbiao"
+        android:textSize="@dimen/content_16"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/commit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/btn_login"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:text="提  交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/content_14" />
+    </RelativeLayout>
+
+</LinearLayout>
